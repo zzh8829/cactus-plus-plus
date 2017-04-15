@@ -1,42 +1,3 @@
-/* Reset */
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    margin: 0;
-    padding: 0
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block
-}
-
-body {
-    line-height: 1
-}
-
-blockquote, q {
-    quotes: none
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-    content: none
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0
-}
-
-*, *:before, *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-
 /* Clearfix */
 
 .clearfix:after {
@@ -113,11 +74,12 @@ table {
 
 html, body {
     height: 100%;
+    margin: 0px;
 }
 
 body {
     font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #666;
+    color: #111;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
@@ -136,7 +98,7 @@ h2 {
 
 .wrapper.profile {
     padding: 100px 40px 0px;
-    max-width: 600px;
+    max-width: 655px;
 }
 
 .profile #header {
@@ -171,66 +133,93 @@ h2 {
 }
 
 nav.main-nav {
-    padding: 20px 20px 0;
-    /*max-width: 600px;*/
-    /*width:100%;*/
+  background: rgba(255, 255, 255, .90);
+  text-align: center;
+  z-index: 100;
+  padding: 0px 60px;
+  left:0;
+  right:0;
+  max-width:100%;
+  position: fixed;
+  display: flex;
+  justify-content:flex-end;
+}
+
+nav.main-nav a {
+  padding: 12px 12px;
+  color: #5badf0;
+  font-size: 0.9em;
+  line-height: 1;
+  border-radius: 3px;
+}
+
+nav.main-nav a.nav-logo {
+  margin-right:auto;
+}
+
+nav.main-nav a.cta {
+  background-color: rgba(91,173,240, 0.6);
+  color: #fff;
+  margin: 4px 12px;
+  padding: 8px 12px;
+}
+
+nav a {
+  border-bottom: 1px solid transparent;
+  border-radius: 0px;
+}
+
+nav a.active {
+  border-color: #5badf0;
+  border-radius: 0px;
+}
+
+nav a:hover {
+  border-color: #5badf0;
+  border-radius: 0px;
+  transition: border 0.5s linear;
+}
+
+@media screen and (max-width: 768px) {
+  nav.main-nav {
+    padding: 0px 30px;
     background: #fff;
     background: rgba(255, 255, 255, .90);
     margin: 0 auto;
     text-align: right;
-    /*position: fixed;*/
     z-index: 100;
-}
+  }
 
-nav.main-nav a {
-    top: 8px;
-    right: 6px;
-    padding: 8px 12px;
+  nav.main-nav a {
+    padding: 8px 8px;
     color: #5badf0;
     font-size: 13px;
-    /*font-weight: bold;*/
     line-height: 1.35;
-    border-radius: 3px;
+  }
+
+  nav.main-nav a.cta {
+    margin: 4px 8px;
+    padding: 4px 8px;
+  }
 }
 
-nav.main-nav a.cta {
-    background: #5badf0;
-    color: #fff;
-    margin-left: 12px;
-}
-@media (max-width: 700px) {
-  nav.main-nav {
-      padding: 20px 10px 0 0;
-      background: #fff;
-      background: rgba(255, 255, 255, .90);
-      margin: 0 auto;
-      text-align: right;
-      z-index: 100;
+@media screen and (max-width: 540px) {
+  nav.main-nav a.nav-logo{
+    display: none;
   }
-  nav.main-nav a {
-      top: 8px;
-      right: 6px;
-      padding: 8px 8px;
-      color: #5badf0;
-      font-size: 13px;
-      line-height: 1.35;
-      border-radius: 3px;
+  nav.main-nav a.cta {
+    display: none;
   }
-}
-@media (max-width: 324px) {
-    nav.main-nav a.cta {
-      display: none;
-    }
 }
 
 .wrapper {
-    max-width: 600px;
+    max-width: 655px;
     margin: auto;
     padding: 60px 40px 100px 40px;
 }
 
 .wrapper.home {
-    max-width: 600px;
+    max-width: 655px;
     padding: 0px 40px 20px 40px;
 }
 
@@ -323,6 +312,10 @@ em, i {
 .home h2 {
     font: italic 19px/1.3em Georgia, serif;
     color: #bbb;
+}
+
+.post {
+    padding: 0px 25px;
 }
 
 .post header {
