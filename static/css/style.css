@@ -76,9 +76,12 @@ html, body {
     height: 100%;
     margin: 0px;
 }
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
 
 body {
-    font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.125rem;
     color: #111;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -92,7 +95,6 @@ h1 {
 }
 
 h2 {
-    font: italic 19px/1.3em Georgia, serif;
     color: #bbb;
 }
 
@@ -117,10 +119,10 @@ h2 {
 }
 
 .profile h1 {
-    font-weight: 400;
     letter-spacing: 0px;
-    font-size: 20px;
     color: #222;
+    font-weight: 500;
+    font-size: 2rem;
 }
 
 .profile h2 {
@@ -213,13 +215,13 @@ nav a:hover {
 }
 
 .wrapper {
-    max-width: 655px;
+    max-width: 700px;
     margin: auto;
     padding: 60px 40px 100px 40px;
 }
 
 .wrapper.home {
-    max-width: 655px;
+    max-width: 700px;
     padding: 0px 40px 20px 40px;
 }
 
@@ -239,11 +241,10 @@ nav a:hover {
 a, #title, #post-list a:hover, #post-list li:hover .dates, #title:hover {
     text-decoration: none;
     color: #5badf0;
-    color: #5694f1;
 }
 
 p a {
-    color: #5694f1;
+    color: #5badf0;
 }
 
 
@@ -314,10 +315,6 @@ em, i {
     color: #bbb;
 }
 
-.post {
-    padding: 0px 25px;
-}
-
 .post header {
     text-align: center;
 }
@@ -325,12 +322,18 @@ em, i {
 .post h1 {
     margin-bottom: 20px;
     color: #222;
-    font: 300 32px/1.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4375rem;
+    margin-top: 1.625rem;
 }
 
 .post h2 {
-    margin-bottom: 40px;
-    font: 300 24px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 2.4375rem;
+    margin-bottom: .8125rem;
+    font-size: 1.6875rem;
+    line-height: 2.4375rem;
     color: #111;
 }
 
@@ -397,8 +400,9 @@ p.small {
 }
 
 blockquote {
-    padding-left: 15px;
-    border-left: 3px solid #eee;
+    padding: 0 1.4375rem 0 1.5625rem;
+    border-left: 3px solid #5badf0;
+    margin-inline-start: 1rem;
 }
 
 hr {
@@ -500,7 +504,7 @@ Post List
     position: relative;
     top: 1px;
     font: 300 17px/1.8 "Helvetica Neue", helvetica, Arial, sans-serif;
-    color: #bbb;
+    color: #222;
 }
 
 #post-list-footer {
@@ -519,9 +523,9 @@ Post List
 }
 
 #archive-link:hover {
-    background: #5694f1;
+    background: #5badf0;
     color: #fff;
-    box-shadow: 0 0 0 1px #5694f1;
+    box-shadow: 0 0 0 1px #5badf0;
 }
 
 #archive-link span {
@@ -682,7 +686,7 @@ h2.month {
 }
 
 #archive-list li a:hover, #archive-list li:hover .dates {
-    color: #5694f1;
+    color: #5badf0;
 }
 
 #post-meta img.avatar {
@@ -706,7 +710,7 @@ h2.month {
 
 #post-list.archive.readmore a {
     font: 400 16px/1.6 "Helvetica Neue", helvetica, Arial, sans-serif;
-    color: #5694f1;
+    color: #5badf0;
 }
 
 #post-list.archive.readmore a:hover {
@@ -819,13 +823,13 @@ h2.month {
 }
 
 .archive .post-item:hover {
-    color: #5694f1;
+    color: #5badf0;
     padding-left: 13px;
     /*border-left: 1px solid #5badf0;*/
     transition: 0.3s ease-out;
 }
 .archive .post-item:hover .post-time,.archive .post-item:hover .post-link {
-    color: #5694f1;
+    color: #5badf0;
 }
 
 .fa.fa-heart:hover {
@@ -931,5 +935,28 @@ a.symbol:hover {
 }
 
 .page-tags .tags:hover a {
-    color: #5694f1;
+    color: #5badf0;
+}
+
+.tags {
+    border-top: 1px solid rgba(0,0,0,.05);
+    padding-top: 1rem;
+}
+
+.tags-title {
+    display: inline-block;
+    line-height: 2rem;
+    color: #222;
+    font-weight: 500;
+}
+
+.tags-item {
+    display: inline-block;
+    padding: 0 .9375rem;
+    line-height: 2rem;
+    border: 1px solid #e6e6e6;
+    text-decoration: none;
+    border-radius: .1875rem;
+    color: #222;
+    margin-bottom: .75rem;
 }

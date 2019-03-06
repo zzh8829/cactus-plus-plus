@@ -16,15 +16,6 @@
                     {{ .Date.Format "Jan 2, 2006 15:04" }}
                     · {{ if lt 1 .WordCount }}{{ .WordCount }} words{{ else }}{{ .WordCount }} word{{ end }}
                     · {{ if eq 1 .ReadingTime }}{{ .ReadingTime }} minute read{{ else }}{{ .ReadingTime }} minutes read{{ end }}
-                      <span class="tags">
-                      {{ with .Params.tags }}
-                      {{ if ge (len .) 1 }}
-                          {{ range . }}
-                              <a href="/tags/{{ . | urlize }}">{{ . }}</a>
-                          {{ end }}
-                      {{ end }}
-                      {{ end}}
-                      </span>
                     </h2>
                 </header>
                 {{ if .Site.Params.enableToc }}
@@ -38,6 +29,21 @@
                     {{ .Content }}
                 </section>
             </article>
+
+            {{ with .Params.tags }}
+            {{ if ge (len .) 1 }}
+                <ul class="tags">
+                    <li class="tags-title">
+                        Tags:
+                    </li>
+                    {{ range . }}
+                        <li class=tags-item>
+                            <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+                        </li>
+                    {{ end }}
+                </ul>
+            {{ end }}
+            {{ end}}
 
             {{ if .Site.Params.enableGithubIssuesTips }}
                 {{ partial "github-issues-tip.html" . }}
