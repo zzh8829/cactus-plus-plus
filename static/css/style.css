@@ -258,12 +258,12 @@ a, #post-nav a, #post-list a {
     transition: all 0.15s ease;
 }
 
-ul {
+article > ul {
     margin: 0;
     padding: 0;
 }
 
-li {
+article > li {
     list-style-type: circle;
     list-style-position: inside;
 }
@@ -938,7 +938,7 @@ a.symbol:hover {
     color: #5badf0;
 }
 
-.tags {
+ul.tags {
     border-top: 1px solid rgba(0,0,0,.05);
     padding-top: 1rem;
 }
