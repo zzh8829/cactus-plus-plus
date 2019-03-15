@@ -205,14 +205,14 @@ nav a:hover {
   }
 }
 
-@media screen and (max-width: 540px) {
+/* @media screen and (max-width: 540px) {
   nav.main-nav a.nav-logo{
     display: none;
   }
   nav.main-nav a.cta {
     display: none;
   }
-}
+} */
 
 .wrapper {
     max-width: 700px;
@@ -258,12 +258,12 @@ a, #post-nav a, #post-list a {
     transition: all 0.15s ease;
 }
 
-article > ul {
+.wrapper ul {
     margin: 0;
     padding: 0;
 }
 
-article > li {
+.wrapper li {
     list-style-type: circle;
     list-style-position: inside;
 }
