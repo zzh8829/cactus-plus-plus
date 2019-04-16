@@ -264,7 +264,7 @@ a, #post-nav a, #post-list a {
 }
 
 .wrapper li {
-    list-style-type: circle;
+    list-style-type: disc;
     list-style-position: inside;
 }
 
@@ -634,7 +634,7 @@ Post List
     padding: 1px;
 }
 
-#post-nav span.prev:hover .arrow {
+/* #post-nav span.prev:hover .arrow {
     left: -4px;
 }
 
@@ -648,7 +648,7 @@ Post List
 
 #post-nav span.next:hover {
     right: -3px;
-}
+} */
 
 
 /* Archive */
@@ -750,6 +750,14 @@ h2.month {
     .wrapper {
         padding: 20px 20px 20px 20px;
     }
+    .wrapper.tags {
+        padding: 20px 20px 20px 20px !important;
+    }
+
+    .archive .post-item {
+        padding: 10px 0px !important;
+    }
+
     #header {
         margin-bottom: 60px;
         /*border-bottom: 1px solid #eee; */
@@ -795,11 +803,16 @@ h2.month {
     font-size: 16px;
 }
 
+.archive h3 {
+    color: #5badf0;
+    text-align: center;
+}
+
 .archive .post-item {
     padding: 10px 10px;
-    /*border-left: 1px solid #cacaca;*/
-    overflow-x: hidden;
-    white-space:nowrap;
+    /* border-left: 1px solid #cacaca; */
+    /* overflow-x: hidden;
+    white-space:nowrap; */
 }
 
 .archive .post-time {
@@ -959,4 +972,10 @@ ul.tags {
     border-radius: .1875rem;
     color: #222;
     margin-bottom: .75rem;
+}
+
+@media screen and (max-width: 540px) {
+    .page-tags .tags {
+       margin: 7px 4px;
+    }
 }
