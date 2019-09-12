@@ -141,6 +141,7 @@ nav.main-nav {
   padding: 0px 60px;
   left:0;
   right:0;
+  top:0;
   max-width:100%;
   position: fixed;
   display: flex;
